@@ -1,0 +1,224 @@
+
+[Captions]
+TFCrnaListaDialog.BDodaj=Dodaj na crnu listu!!
+TFCrnaListaDialog.BOdustani=Odustani!!
+TFCrnaListaDialog.TFCrnaListaDialog=Dodaj na crnu listu!!
+TFDodajKorisnika.BDodajKorisnika=Dodaj novog korisnika!!
+TFDodajKorisnika.BOdustaniKorisnik=Odustani!!
+TFDodajKorisnika.LPass=Lozinka: !!
+TFDodajKorisnika.LRole=Role: !!
+TFDodajKorisnika.LUsername=Korisnièko ime: !!
+TFDodajKorisnika.TFDodajKorisnika=Dodaj novog korisnika!!
+TFGlavna.DodajKorisnika=Dodaj novog korisnika!!
+TFGlavna.Dodajnacrnulistu1=Dodaj na crnu listu!!
+TFGlavna.Postavkeaplikacije1=Postavke aplikacije!!
+TFGlavna.Promjena1=Podaci za prijavu!!
+TFGlavna.PromjenaKorisnika=Promjena korisnika!!
+TFGlavna.Sustav1=Sustav!!
+TFGlavna.TFGlavna=GZP!!
+TFGlavna.Upravljanjecrnomlistom1=Upravljanje crnom listom!!
+TFGlavna.UrediKorisnika=Uredi postojeæe korisnike!!
+TFGlavna.Urediprofil1=Uredi profil !!
+TFPostavke.BSpremiPostavke=Spremi postavke!Save !
+TFPostavke.CBDark=Tamni naèin rada!Dark mode!
+TFPostavke.CBFullScreen=Prikaži termine preko cijelog zaslona!Fullscreen !
+TFPostavke.CBZapamtiDatum=Zapamti poslijednji datum prilikom izalska iz aplikacije!Remember last date when exiting application!
+TFPostavke.test=Promjena velièine fonta za termine!Change font!
+TFPrijava.GBPrijava=Prijava!!
+TFPrijava.GPrijava=Prijava!!
+TFPrijava.LKor_ime=Korisnièko ime:!!
+TFPrijava.LLozinka=Lozinka:!!
+TFPrijava.TFPrijava=GZP - Prijava!!
+TFUpravljanjeCrnomListom.BPonistiFiltere=Poništi filtere!!
+TFUpravljanjeCrnomListom.BSortiraj=Sortiraj!!
+TFUpravljanjeCrnomListom.LDo=Do:!!
+TFUpravljanjeCrnomListom.Lid=ID:!!
+TFUpravljanjeCrnomListom.LOd=Od:!!
+TFUpravljanjeCrnomListom.Lrazlog=Razlog:!!
+TFUpravljanjeCrnomListom.LSoritraj=Sortiraj silazno!!
+TFUpravljanjeCrnomListom.Ltermin_id=termin_id:!!
+TFUpravljanjeCrnomListom.RBdatum=datum!!
+TFUpravljanjeCrnomListom.RBid=ID!!
+TFUpravljanjeCrnomListom.RBrazlog=razlog!!
+TFUpravljanjeCrnomListom.RBtermin_id=termin_id!!
+TFUpravljanjeCrnomListom.TFUpravljanjeCrnomListom=Upravljanje crnom listom!!
+TFUrediKorisnike.BIzbrisiKorisnika=Izbriši korisnika!!
+TFUrediKorisnike.BOdaberiKorisnika=Odaberi korisnika!!
+TFUrediKorisnike.BOdustaniKorisnik=Odustani!!
+TFUrediKorisnike.BSpremi=Spremi podatke !!
+TFUrediKorisnike.LNaslov=Odaberite postojeæeg korisnika!!
+TFUrediKorisnike.LNoviKorisnik=Korisnièko ime:!!
+TFUrediKorisnike.LPass=Nova lozinka:!!
+TFUrediKorisnike.LPonoviPass=Ponovite lozinku:!!
+TFUrediKorisnike.LRole=Role: !!
+TFUrediKorisnike.TFUrediKorisnike=Uredi postojeæe korisnike!!
+
+[CharSets]
+TFCrnaListaDialog.LOpis=DEFAULT_CHARSET!!
+TFCrnaListaDialog.TFCrnaListaDialog=DEFAULT_CHARSET!!
+TFDodajKorisnika.CBRole=DEFAULT_CHARSET!!
+TFDodajKorisnika.EPass=DEFAULT_CHARSET!!
+TFDodajKorisnika.EPonoviPass=DEFAULT_CHARSET!!
+TFDodajKorisnika.EUsername=DEFAULT_CHARSET!!
+TFDodajKorisnika.LPass=DEFAULT_CHARSET!!
+TFDodajKorisnika.LPodudaranje=DEFAULT_CHARSET!!
+TFDodajKorisnika.LRole=DEFAULT_CHARSET!!
+TFDodajKorisnika.LUsername=DEFAULT_CHARSET!!
+TFDodajKorisnika.TFDodajKorisnika=DEFAULT_CHARSET!!
+TFGlavna.TFGlavna=DEFAULT_CHARSET!!
+TFPostavke.BSpremiPostavke=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.CBDark=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.CBFullScreen=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.CBZapamtiDatum=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.ComboFont=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.test=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPostavke.TFPostavke=DEFAULT_CHARSET!DEFAULT_CHARSET!
+TFPrijava.TFPrijava=EASTEUROPE_CHARSET!!
+TFUpravljanjeCrnomListom.BSortiraj=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.CBSilazno=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.DBGTablica=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.DBGTablica1=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.FilterPanel=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.LSoritraj=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.RBdatum=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.RBid=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.RBrazlog=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.RBtermin_id=DEFAULT_CHARSET!!
+TFUpravljanjeCrnomListom.TFUpravljanjeCrnomListom=DEFAULT_CHARSET!!
+TFUrediKorisnike.CBRole=DEFAULT_CHARSET!!
+TFUrediKorisnike.EKor_ime=DEFAULT_CHARSET!!
+TFUrediKorisnike.ENovaPass=DEFAULT_CHARSET!!
+TFUrediKorisnike.ENovaPassPonovno=DEFAULT_CHARSET!!
+TFUrediKorisnike.LNaslov=DEFAULT_CHARSET!!
+TFUrediKorisnike.LNoviKorisnik=DEFAULT_CHARSET!!
+TFUrediKorisnike.LPass=DEFAULT_CHARSET!!
+TFUrediKorisnike.LPodudaranje=DEFAULT_CHARSET!!
+TFUrediKorisnike.LPonoviPass=DEFAULT_CHARSET!!
+TFUrediKorisnike.LRole=DEFAULT_CHARSET!!
+TFUrediKorisnike.LVKorisnici=DEFAULT_CHARSET!!
+TFUrediKorisnike.TFUrediKorisnike=DEFAULT_CHARSET!!
+
+[Collections]
+TFPostavke.siLangCombo1.LanguageInfos-0+.FontName=Segoe UI!!
+TFPostavke.siLangCombo1.LanguageInfos-1+.FontName=Segoe UI!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-0+.Title.Caption=ID!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-1+.Title.Caption=termin_id!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-2+.Title.Caption=razlog!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-3+.Title.Caption=datum!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-4+.Title.Caption=TerminRegistracija!!
+TFUpravljanjeCrnomListom.DBGTablica.Columns-5+.Title.Caption=Dana na crnoj listi!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-0+.Title.Caption=ID!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-1+.Title.Caption=datum!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-2+.Title.Caption=registracija!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-3+.Title.Caption=korisnik_id!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-4+.Title.Caption=vrijeme!!
+TFUpravljanjeCrnomListom.DBGTablica1.Columns-5+.Title.Caption=opis!!
+TFUrediKorisnike.LVKorisnici.Columns-0+.Caption=Korisnièko ime!!
+TFUrediKorisnike.LVKorisnici.Columns-1+.Caption=Role!!
+
+[Dialogs]
+TFGlavna.Abort=&Abort!!
+TFGlavna.All=&All!!
+TFGlavna.Cancel=Cancel!!
+TFGlavna.Confirm=Confirm!!
+TFGlavna.Error=Error!!
+TFGlavna.Help=&Help!!
+TFGlavna.Ignore=&Ignore!!
+TFGlavna.Information=Information!!
+TFGlavna.No=&No!!
+TFGlavna.No To All=N&o to All!!
+TFGlavna.OK=OK!!
+TFGlavna.Retry=&Retry!!
+TFGlavna.Warning=Warning!!
+TFGlavna.Yes=&Yes!!
+TFGlavna.Yes To All=Yes to &All!!
+
+[DisplayLabels]
+TFUpravljanjeCrnomListom.ADOTCrnaListaDananacrnojlisti=Dana na crnoj listi!!
+TFUpravljanjeCrnomListom.ADOTCrnaListadatum=datum!!
+TFUpravljanjeCrnomListom.ADOTCrnaListaID=ID!!
+TFUpravljanjeCrnomListom.ADOTCrnaListarazlog=razlog!!
+TFUpravljanjeCrnomListom.ADOTCrnaListatermin_id=termin_id!!
+TFUpravljanjeCrnomListom.ADOTCrnaListaTerminRegistracija=TerminRegistracija!!
+TFUpravljanjeCrnomListom.ADOTTerminidatum=datum!!
+TFUpravljanjeCrnomListom.ADOTTerminiID=ID!!
+TFUpravljanjeCrnomListom.ADOTTerminikorisnik_id=korisnik_id!!
+TFUpravljanjeCrnomListom.ADOTTerminiopis=opis!!
+TFUpravljanjeCrnomListom.ADOTTerminiregistracija=registracija!!
+TFUpravljanjeCrnomListom.ADOTTerminivrijeme=vrijeme!!
+
+[Fonts]
+TFCrnaListaDialog.LOpis=Segoe UI!!
+TFCrnaListaDialog.TFCrnaListaDialog=Segoe UI!!
+TFDodajKorisnika.CBRole=Segoe UI!!
+TFDodajKorisnika.EPass=Segoe UI!!
+TFDodajKorisnika.EPonoviPass=Segoe UI!!
+TFDodajKorisnika.EUsername=Segoe UI!!
+TFDodajKorisnika.LPass=Segoe UI!!
+TFDodajKorisnika.LPodudaranje=Segoe UI!!
+TFDodajKorisnika.LRole=Segoe UI!!
+TFDodajKorisnika.LUsername=Segoe UI!!
+TFDodajKorisnika.TFDodajKorisnika=Segoe UI!!
+TFGlavna.TFGlavna=Segoe UI!!
+TFPostavke.BSpremiPostavke=Segoe UI!!
+TFPostavke.CBDark=Segoe UI!!
+TFPostavke.CBFullScreen=Segoe UI!!
+TFPostavke.CBZapamtiDatum=Segoe UI!!
+TFPostavke.ComboFont=Segoe UI!!
+TFPostavke.test=Segoe UI!!
+TFPostavke.TFPostavke=Segoe UI!!
+TFPrijava.TFPrijava=Arial!!
+TFUpravljanjeCrnomListom.BSortiraj=Segoe UI!!
+TFUpravljanjeCrnomListom.CBSilazno=Segoe UI!!
+TFUpravljanjeCrnomListom.DBGTablica=Segoe UI!!
+TFUpravljanjeCrnomListom.DBGTablica1=Segoe UI!!
+TFUpravljanjeCrnomListom.FilterPanel=Segoe UI!!
+TFUpravljanjeCrnomListom.LSoritraj=Segoe UI!!
+TFUpravljanjeCrnomListom.RBdatum=Segoe UI!!
+TFUpravljanjeCrnomListom.RBid=Segoe UI!!
+TFUpravljanjeCrnomListom.RBrazlog=Segoe UI!!
+TFUpravljanjeCrnomListom.RBtermin_id=Segoe UI!!
+TFUpravljanjeCrnomListom.TFUpravljanjeCrnomListom=Segoe UI!!
+TFUrediKorisnike.CBRole=Segoe UI!!
+TFUrediKorisnike.EKor_ime=Segoe UI!!
+TFUrediKorisnike.ENovaPass=Segoe UI!!
+TFUrediKorisnike.ENovaPassPonovno=Segoe UI!!
+TFUrediKorisnike.LNaslov=Segoe UI!!
+TFUrediKorisnike.LNoviKorisnik=Segoe UI!!
+TFUrediKorisnike.LPass=Segoe UI!!
+TFUrediKorisnike.LPodudaranje=Segoe UI!!
+TFUrediKorisnike.LPonoviPass=Segoe UI!!
+TFUrediKorisnike.LRole=Segoe UI!!
+TFUrediKorisnike.LVKorisnici=Segoe UI!!
+TFUrediKorisnike.TFUrediKorisnike=Segoe UI!!
+
+[Hints]
+TFDodajKorisnika.EUsername=Dodaj korisnièko ime za novog korisnika!!
+
+[Language names - for internal use only!]
+Language_1=HRV
+Language_2=ENG
+
+[Multilines]
+TFDodajKorisnika.CBRole.Items=user,admin!!
+TFPostavke.ComboFont.Items=mali,srednji,veliki!!
+TFUpravljanjeCrnomListom.DBNav.Hints="First record","Prior record","Next record","Last record","Insert record","Delete record","Edit record","Post edit","Cancel edit","Refresh data","Apply updates","Cancel updates"!!
+TFUrediKorisnike.CBRole.Items=user,admin!!
+
+[OPTIONS]
+Delimiter=!
+IsUTF8File=0
+
+[Other]
+TFCrnaListaDialog.ERazlog.TextHint=Unesite razlog dodavanja na crnu listu!!
+TFDodajKorisnika.CBRole.Text=user!!
+TFDodajKorisnika.EPass.TextHint=Postavi lozinku za novog korisnika!!
+TFDodajKorisnika.EPonoviPass.TextHint=Ponovi lozinku!!
+TFDodajKorisnika.EUsername.TextHint=Dodaj korisnièko ime za novog korisnika!!
+TFPostavke.ComboFont.TextHint=Odaberite velièinu fonta!!
+TFPrijava.ADOConnection1.ConnectionString=Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=GZP.mdb;Mode=Read|Share Deny Read|Share Deny Write;Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=0;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False;!!
+TFPrijava.ADOConnection1.Provider=Microsoft.Jet.OLEDB.4.0!!
+TFUpravljanjeCrnomListom.ADOTCrnaLista.IndexFieldNames=termin_id!!
+TFUpravljanjeCrnomListom.ADOTTermini.IndexFieldNames=ID!!
+TFUrediKorisnike.CBRole.Text=user!!
+

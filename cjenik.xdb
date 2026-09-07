@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xdb="http://www.borland.com/schemas/delphi/10.0/XMLDataBinding">
+	<xs:element name="Cjenik" type="CjenikType"/>
+	<xs:complexType name="CjenikType"><xs:annotation>
+			<xs:appinfo xdb:docElement="Cjenik"/>
+		</xs:annotation>
+		<sequence xmlns="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="Usluga" type="UslugaType" maxOccurs="unbounded"/>
+		</sequence>
+	</xs:complexType>
+	<xs:complexType name="UslugaType">
+		<sequence xmlns="http://www.w3.org/2001/XMLSchema">
+			<xs:element name="Naziv" type="xs:string"/>
+			<xs:element name="Kategorija" type="xs:string"/>
+			<xs:element name="Cijena" type="xs:string"><xs:annotation>
+          <xs:appinfo xdb:dataType="float"/>
+        </xs:annotation>
+      </xs:element>
+			<xs:element name="Aktivno" type="xs:string"/>
+		</sequence>
+	</xs:complexType>
+</xs:schema>

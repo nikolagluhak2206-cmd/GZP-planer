@@ -1,0 +1,28 @@
+{
+  "HotelGume": [
+    {
+      "vlasnik": "4ThSQMtsjm7zX9psmeUMr7AV8A==",
+      "broj_mobitela": "jp6g/+1AQsQBOZywTxgs/0H5",
+      "marka_dimenzije": "Conti 205/55 R16",
+      "lokacija": "skaldiste",
+      "napomena": "Gume imaju lagano ostecenje na desnoj strani",
+      "datum_zaprimanja": "12.8.2026."
+    },
+    {
+      "vlasnik": "91CKDisqjtHQoKsbeWDBwED57auq",
+      "broj_mobitela": "bMQ9oL3z65l+nUCVjTdygGnm",
+      "marka_dimenzije": "Sava 205/55 R16",
+      "lokacija": "Skladište",
+      "napomena": "",
+      "datum_zaprimanja": "29.7.2026."
+    },
+    {
+      "vlasnik": "FUKkmI0M2EXbrbY6aKaRuhsWFg==",
+      "broj_mobitela": "sgjhA4ewb1GseHBq6gtgWs/m",
+      "marka_dimenzije": "Conti 205/55 R16",
+      "lokacija": "skladiste",
+      "napomena": "4 zimske gume",
+      "datum_zaprimanja": "1.9.2026."
+    }
+  ]
+}

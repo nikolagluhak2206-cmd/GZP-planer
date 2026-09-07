@@ -1,0 +1,39 @@
+# RAD Studio / C++Builder build output
+Win32/
+Win64x/
+
+# Executables
+*.exe
+
+# RAD Studio generated/intermediate files
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.map
+*.pdb
+*.pdi
+*.tds
+*.obj
+*.hpp
+
+# RAD Studio local/user files
+*.cbproj.local
+*.cbuser
+*.dsk
+*.identcache
+*.local
+
+# Backup / temporary files
+*.~*
+*.tmp
+*.bak
+
+# Database lock file
+*.ldb
+
+# RAD Studio recovery
+__recovery/
+
+# Database access
+*.accdb

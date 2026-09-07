@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cjenik>
+	<Usluga>
+		<Naziv>Montaža gume R12/R13</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>4.5</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža gume R12/R13</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>4.50</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža gume R14/R15</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>5.00</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža gume R16/R17</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>6.00</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža gume R18/R19</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>7.00</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža gume R20</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>8</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža teretne i terenske gume</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>8</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža RFT16; R17</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>7</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža RFT18; R19</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>8</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Montaža RFT20; R21</Naziv>
+		<Kategorija>Montaža</Kategorija>
+		<Cijena>10</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans R12; R13; R14</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>5</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans R15; R16</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>6</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans R17</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>7</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans R18; R19</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>8</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans R20; R21</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>9</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans teretne i terenske gume</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>9</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans RFT R16; R17</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>8</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Balans RFT R18; R19; R20; R21</Naziv>
+		<Kategorija>Balansiranje</Kategorija>
+		<Cijena>10</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Krpanje gume</Naziv>
+		<Kategorija>Krpanje</Kategorija>
+		<Cijena>20</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Krpanje zračnice</Naziv>
+		<Kategorija>Krpanje</Kategorija>
+		<Cijena>5</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Programiranje senzora</Naziv>
+		<Kategorija>Ostalo</Kategorija>
+		<Cijena>15</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Moto gume M+B+S 7+8+15</Naziv>
+		<Kategorija>Moto</Kategorija>
+		<Cijena>30</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Romobil M+S 8+12</Naziv>
+		<Kategorija>Romobil</Kategorija>
+		<Cijena>20</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Čuvanje guma </Naziv>
+		<Kategorija>Čuvanje</Kategorija>
+		<Cijena>4</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>
+	<Usluga>
+		<Naziv>Čuvanje kotača</Naziv>
+		<Kategorija>Čuvanje</Kategorija>
+		<Cijena>5</Cijena>
+		<Aktivno>DA</Aktivno>
+	</Usluga>  <Usluga>
+    <Naziv>Montaža traktorske gume</Naziv>
+    <Kategorija>Montaža</Kategorija>
+    <Cijena>10</Cijena>
+    <Aktivno>DA</Aktivno>
+  </Usluga>
+</Cjenik>

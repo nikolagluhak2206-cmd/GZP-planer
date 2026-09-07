@@ -1,0 +1,37 @@
+# VCL/Delphi form files - ne računaj kao programski jezik
+*.dfm linguist-vendored
+
+# RAD Studio projektne datoteke
+*.cbproj linguist-vendored
+
+# Build/intermediate datoteke
+*.ilc linguist-generated
+*.ild linguist-generated
+*.ilf linguist-generated
+*.ils linguist-generated
+*.map linguist-generated
+*.pdb linguist-generated
+*.pdi linguist-generated
+*.tds linguist-generated
+*.obj linguist-generated
+
+# Izvršne datoteke
+*.exe linguist-generated
+
+# Podaci - želimo da ih GitHub prepozna kao JSON/XML
+*.json linguist-language=JSON
+*.xml linguist-language=XML
+
+# C++ source kod
+*.cpp linguist-language=C++
+*.h linguist-language=C++
+
+# Binarne baze podataka - ne računaj u Languages statistiku
+*.mdb linguist-vendored
+*.accdb linguist-vendored
+
+# Slike - ne računaj u Languages statistiku
+*.bmp linguist-vendored
+*.jpg linguist-vendored
+*.jpeg linguist-vendored
+*.png linguist-vendored

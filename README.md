@@ -1,319 +1,300 @@
-\# GZP Planer (Gume Zelina Planer)
+# GZP Planer (Gume Zelina Planer)
 
+Desktop aplikacija za Windows razvijena u C++Builderu / VCL-u za upravljanje poslovanjem vulkanizerskog servisa i skladišta guma.
 
+Aplikacija omogućuje zakazivanje termina, evidenciju korisnika, upravljanje crnom listom vozila, sezonsko skladištenje guma ("hotel guma"), izradu cjenika te pretragu preporučenih dimenzija guma prema podacima o vozilu.
 
-Desktop aplikacija (Windows, C++Builder / VCL) za upravljanje poslovanjem vulkanizerskog servisa/skladišta guma — zakazivanje termina, "hotel guma" (sezonsko skladištenje), cjenik, pretraga dimenzija guma po vozilu, upravljanje korisnicima i crna lista (blokirane registracije vozila).
+## Sadržaj
 
+* [O aplikaciji](#o-aplikaciji)
+* [Značajke](#značajke)
+* [Tehnologije](#tehnologije)
+* [Struktura projekta](#struktura-projekta)
+* [Baza podataka](#baza-podataka)
+* [Preduvjeti](#preduvjeti)
+* [Instalacija i pokretanje](#instalacija-i-pokretanje)
+* [Korištenje](#korištenje)
+* [Sigurnost](#sigurnost)
+* [Screenshots](#screenshots)
+* [Poznata ograničenja](#poznata-ograničenja)
+* [Licenca](#licenca)
 
+## O aplikaciji
 
+GZP Planer je desktop aplikacija izvorno razvijena za servis "Gume Zelina".
 
+Cilj aplikacije je objediniti svakodnevne funkcionalnosti potrebne za rad vulkanizerskog servisa na jednom mjestu:
 
+* zakazivanje i pregled termina
+* upravljanje korisničkim računima i korisničkim ulogama
+* evidencija vozila na crnoj listi
+* sezonsko skladištenje guma korisnika
+* izrada i ispis cjenika
+* pretraga preporučenih dimenzija guma prema vozilu
+* generiranje izvještaja i potvrda
+* podrška za hrvatski i engleski jezik
+* spremanje postavki aplikacije
 
-\## Sadržaj
+Projekt je izrađen u Embarcadero C++Builderu koristeći VCL framework.
 
+## Značajke
 
+### Prijava i korisnici
 
-\- \[O aplikaciji](#o-aplikaciji)
+* Prijava korisničkim imenom i lozinkom.
+* Lozinke se ne spremaju u čitljivom obliku, već se hashiraju.
+* Sustav korisničkih uloga (`role`) omogućuje različite razine pristupa.
+* Administratori mogu dodavati i uređivati korisničke račune.
+* Korisnik može uređivati vlastiti profil.
 
-\- \[Značajke](#značajke)
+### Glavni ekran i termini
 
-\- \[Tehnologije](#tehnologije)
+* Mjesečni kalendar za pregled i odabir datuma.
+* Tablični prikaz termina za odabrani dan.
+* Dohvat podataka iz Microsoft Access baze putem ADO-a.
+* Dodavanje, uređivanje i upravljanje terminima.
+* Mogućnost dodavanja registracije na crnu listu iz konteksta termina.
 
-\- \[Struktura projekta](#struktura-projekta)
+### Crna lista
 
-\- \[Baza podataka](#baza-podataka)
+* Evidencija registracijskih oznaka vozila.
+* Spremanje razloga zbog kojeg je vozilo dodano na crnu listu.
+* Automatska provjera vozila prilikom rada s terminima.
+* Vizualno označavanje termina povezanih s vozilima na crnoj listi.
+* Administracija zapisa crne liste.
 
-\- \[Preduvjeti](#preduvjeti)
+### Hotel guma
 
-\- \[Instalacija i pokretanje](#instalacija-i-pokretanje)
+Modul "Hotel guma" služi za evidenciju sezonski pohranjenih guma.
 
-\- \[Korištenje](#korištenje)
+Za svaki zapis moguće je evidentirati:
 
-\- \[Sigurnost](#sigurnost)
+* vlasnika
+* broj mobitela
+* marku i dimenziju guma
+* lokaciju skladištenja
+* napomenu
+* datum zaprimanja
 
-\- \[Poznata ograničenja](#poznata-ograničenja)
+Podaci se pohranjuju u JSON formatu, uz mogućnost enkripcije osjetljivih podataka.
 
-\- \[Licenca](#licenca)
+Za korisnika je moguće generirati potvrdu o zaprimanju guma putem FastReport predloška.
 
+### Cjenik
 
+* Kreiranje i uređivanje cjenika usluga.
+* Spremanje podataka u XML formatu.
+* Učitavanje i prikaz podataka iz cjenika.
+* Generiranje i ispis cjenika putem FastReporta.
 
-\## O aplikaciji
+### Pretraga guma po vozilu
 
+Modul omogućuje kaskadni odabir:
 
+1. godine proizvodnje
+2. marke vozila
+3. modela
+4. izvedbe
 
-GZP Planer je interni alat za servis guma koji objedinjuje:
+Nakon odabira vozila aplikacija putem HTTP zahtjeva dohvaća preporučene dimenzije guma iz vanjskog API-ja.
 
-
-
-\- kalendarsko zakazivanje termina,
-
-\- vođenje korisničkih računa djelatnika s razinama pristupa (role),
-
-\- evidenciju vozila na "crnoj listi" (npr. zbog neplaćanja ili nedolazaka),
-
-\- skladištenje ("hotel guma") sezonskih guma korisnika uz mogućnost ispisa potvrde,
-
-\- izradu cjenika usluga,
-
-\- pretragu preporučenih dimenzija guma prema marki, modelu, izvedbi i godini proizvodnje vozila.
-
-
-
-Aplikacija je izvorno razvijena za servis "Gume Zelina" (naziv projektne datoteke: `Gume Zelina Planer.cbproj`).
-
-
-
-\## Značajke
-
-
-
-\### 🔐 Prijava i korisnici
-
-\- Prijava korisnim imenom i lozinkom (`Login`), lozinke se ne čuvaju u čitljivom obliku (hashing).
-
-\- Uloge korisnika (`role`) — razlikuju se prava pristupa (npr. administrator vs. djelatnik).
-
-\- Dodavanje novih korisnika (`DodajKorisnika`) i uređivanje postojećih (`UrediKorisnike`) — dostupno administratoru.
-
-\- Promjena trenutnog korisnika i uređivanje vlastitog profila iz glavnog izbornika.
-
-
-
-\### 📅 Glavni ekran — kalendar termina
-
-\- Mjesečni kalendar (`Glavna`) za pregled i odabir datuma.
-
-\- Tablični prikaz termina za odabrani dan, dohvaćen iz baze putem ADO upita.
-
-\- Desni klik na termin nudi opciju "Dodaj na crnu listu" uz unos razloga.
-
-
-
-\### 🚫 Crna lista
-
-\- Evidencija registracijskih oznaka vozila koja se ne smiju/ne trebaju uslužiti (`CrnaLista`, `UpravljanjeCrnomListom`).
-
-\- Automatska provjera i vizualno isticanje termina čije je vozilo na crnoj listi.
-
-\- Upravljački ekran za pregled, dodavanje i uklanjanje unosa s crne liste.
-
-
-
-\### 🏨 Hotel guma (sezonsko skladištenje)
-
-\- Evidencija pohranjenih guma po vlasniku: ime, broj mobitela, marka i dimenzija gume, lokacija skladištenja, napomena, datum zaprimanja (`HotelGume`).
-
-\- Dodavanje, izmjena, brisanje i pretraga unosa.
-
-\- Podaci se pohranjuju/učitavaju u JSON formatu (`HotelGume.json`), uz podršku za enkripciju osjetljivih podataka.
-
-\- Ispis potvrde o zaprimanju guma na čuvanje putem FastReport predloška (`Potvrda o zaprimanju guma na čuvanje.fr3`).
-
-
-
-\### 💰 Cjenik
-
-\- Kreiranje i uređivanje cjenika usluga (`IzradaCjenika`, `cjenik`), s podacima pohranjenim u `cjenik.xml` / `cjenik.xdb`.
-
-\- Ispis/generiranje cjenika putem FastReport izvještaja.
-
-
-
-\### 🔎 Pretraga guma po vozilu
-
-\- Kaskadni odabir: godina proizvodnje → marka → model → izvedba (`PretragaGuma`).
-
-\- Dohvat preporučenih dimenzija guma putem HTTP poziva vanjskom API-ju (`TNetHTTPClient`, JSON odgovor).
-
-
-
-\### ⚙️ Postavke
-
-\- Postavke aplikacije čitaju se/spremaju kroz `.ini` datoteku i/ili registar (`Postavke`, `Postavke\_ini`, `Postavke\_reg`).
-
-\- Podrška za višejezičnost sučelja (komponente `siLang` / `siLangCombo`), uključena zastava Hrvatske (`Flag\_of\_Croatia.bmp`) kao indikator jezika.
-
-
-
-\## Tehnologije
-
-
-
-| Sloj | Tehnologija |
-
-|---|---|
-
-| Jezik / okvir | C++ (Embarcadero C++Builder, VCL) |
-
-| UI komponente | VCL (`TForm`, `TStringGrid`, `TMonthCalendar`, `TListView` ...) |
-
-| Baza podataka | Microsoft Access (`GZP.mdb`) putem ADO (`Data.Win.ADODB`) |
-
-| Izvještaji / ispis | FastReport VCL (`.fr3` predlošci) |
-
-| Enkripcija / hash | TurboPower LockBox (`uTPLb\_Codec`, `uTPLb\_Hash`, `uTPLb\_CryptographicLibrary`) |
-
-| Mrežni pozivi | `System.Net.HttpClient` (REST/JSON poziv za pretragu guma) |
-
-| Pohrana podataka | JSON (hotel guma), XML (cjenik), INI/registar (postavke) |
-
-| Višejezičnost | Sisulizer komponente (`siComp`, `siLngLnk`, `siLangCombo`) |
-
-
-
-\## Struktura projekta
-
-
-
-```
-
+Podaci API-ja obrađuju se u JSON formatu.
+
+### Postavke i višejezičnost
+
+* Spremanje postavki pomoću INI datoteke i registra.
+* Podrška za hrvatski i engleski jezik.
+* Promjena jezika unutar aplikacije.
+* Podrška za tamni način rada.
+* Spremanje određenih korisničkih postavki između pokretanja aplikacije.
+
+## Tehnologije
+
+| Kategorija         | Tehnologija                                                    |
+| ------------------ | -------------------------------------------------------------- |
+| Programski jezik   | C++                                                            |
+| IDE / framework    | Embarcadero C++Builder / RAD Studio, VCL                       |
+| Korisničko sučelje | VCL (`TForm`, `TStringGrid`, `TMonthCalendar`, `TListView`...) |
+| Baza podataka      | Microsoft Access (`GZP.mdb`)                                   |
+| Pristup bazi       | ADO (`TADOConnection`, `TADOQuery`)                            |
+| Izvještaji         | FastReport VCL                                                 |
+| Kriptografija      | TurboPower LockBox                                             |
+| Mrežni zahtjevi    | `System.Net.HttpClient`                                        |
+| Podaci             | JSON, XML                                                      |
+| Postavke           | INI datoteke i Windows Registry                                |
+| Lokalizacija       | Sisulizer                                                      |
+
+## Struktura projekta
+
+```text
 GZP-planer/
 
-├── Gume Zelina Planer.cbproj      # Glavna projektna datoteka (C++Builder)
-
-├── Gume Zelina Planer.cpp         # Ulazna točka aplikacije
-
-├── Gume Zelina PlanerPCH1.h       # Precompiled header
-
-├── Login.cpp / .h / .dfm          # Ekran za prijavu
-
-├── Glavna.cpp / .h / .dfm         # Glavni prozor (kalendar + termini)
-
-├── Korisnik.cpp / .h              # Model podataka korisnika
-
-├── DodajKorisnika.cpp / .h / .dfm # Dodavanje korisnika
-
-├── UrediKorisnike.cpp / .h / .dfm # Uređivanje korisnika
-
-├── PodaciPrijava.cpp / .h / .dfm  # Podaci o prijavi/tvrtki
-
-├── CrnaLista.cpp / .h / .dfm/.fr3 # Dijalog dodavanja na crnu listu
-
-├── UpravljanjeCrnomListom.\*       # Pregled/upravljanje crnom listom
-
-├── HotelGume.cpp / .h / .dfm      # Modul "hotel guma" (skladištenje)
-
-├── HotelGume.json                 # Pohranjeni podaci hotela guma
-
-├── IzradaCjenika.cpp / .h / .dfm  # Izrada/uređivanje cjenika
-
-├── cjenik.cpp / .h / .xml / .xdb  # Model i podaci cjenika
-
-├── PretragaGuma.cpp / .h / .dfm   # Pretraga dimenzija guma po vozilu
-
-├── Postavke.\* / Postavke\_ini.\* / Postavke\_reg.\* # Postavke aplikacije
-
-├── GZP.mdb                        # MS Access baza podataka
-
-├── Report.fr3                     # Dodatni FastReport predložak
-
+├── Gume Zelina Planer.cbproj       # Glavna projektna datoteka
+├── Gume Zelina Planer.cpp          # Ulazna točka aplikacije
+├── Gume Zelina PlanerPCH1.h        # Precompiled header
+│
+├── Login.cpp / .h / .dfm           # Ekran za prijavu
+├── Glavna.cpp / .h / .dfm          # Glavni prozor i kalendar
+├── Korisnik.cpp / .h               # Model korisnika
+├── DodajKorisnika.cpp / .h / .dfm  # Dodavanje korisnika
+├── UrediKorisnike.cpp / .h / .dfm  # Uređivanje korisnika
+├── PodaciPrijava.cpp / .h / .dfm   # Podaci o prijavi
+│
+├── CrnaLista.cpp / .h / .dfm       # Crna lista
+├── UpravljanjeCrnomListom.*        # Upravljanje crnom listom
+│
+├── HotelGume.cpp / .h / .dfm       # Modul hotel guma
+├── HotelGume.json                  # Podaci hotela guma
+│
+├── IzradaCjenika.cpp / .h / .dfm   # Izrada cjenika
+├── cjenik.cpp / .h / .xml / .xdb   # Cjenik
+│
+├── PretragaGuma.cpp / .h / .dfm    # Pretraga guma
+│
+├── Postavke.*                      # Postavke aplikacije
+├── Postavke_ini.*                  # Postavke putem INI datoteke
+├── Postavke_reg.*                  # Postavke putem registra
+│
+├── GZP.mdb                         # Microsoft Access baza
+├── Report.fr3                      # FastReport predložak
 ├── Potvrda o zaprimanju guma na čuvanje.fr3
-
-├── gume\_zelina.jpg / Flag\_of\_Croatia.bmp # Grafički resursi
-
-├── postavke.ini                   # Konfiguracijska datoteka
-
-└── jezik.sil                      # Datoteka prijevoda (Sisulizer)
-
+│
+├── gume_zelina.jpg                 # Grafički resurs
+├── Flag_of_Croatia.bmp             # Grafički resurs
+├── postavke.ini                    # Konfiguracija
+└── jezik.sil                       # Datoteka prijevoda
 ```
 
+## Baza podataka
 
+Aplikacija koristi Microsoft Access bazu podataka `GZP.mdb`.
 
-\## Baza podataka
+Pristup bazi ostvaren je pomoću ADO tehnologije kroz komponente kao što su:
 
+* `TADOConnection`
+* `TADOQuery`
+* `TADOTable`
+* `TDataSource`
 
+Baza sadrži podatke vezane uz korisnike, termine i crnu listu.
 
-Aplikacija koristi \*\*Microsoft Access\*\* bazu podataka (`GZP.mdb`) kojoj se pristupa putem \*\*ADO\*\* konekcije (`TADOConnection`, `TADOQuery`). Baza sadrži barem tablice za korisnike, termine i crnu listu — dio podataka (hotel guma, cjenik) drži se odvojeno u JSON/XML datotekama.
+Podaci za modul "Hotel guma" i cjenik pohranjuju se odvojeno u JSON i XML datotekama.
 
-
-
-\## Preduvjeti
-
-
+## Preduvjeti
 
 Za razvoj i pokretanje aplikacije potrebno je:
 
+* Windows operacijski sustav
+* Embarcadero C++Builder / RAD Studio
+* FastReport VCL
+* TurboPower LockBox
+* Sisulizer runtime komponente
+* Microsoft Access Database Engine / odgovarajući OLEDB driver
+* pristup internetu za modul pretrage guma
 
+Za potpuno otvaranje i kompajliranje projekta potrebno je imati instalirane korištene vanjske komponente.
 
-\- \*\*Windows\*\* operacijski sustav
+## Instalacija i pokretanje
 
-\- \*\*Embarcadero C++Builder / RAD Studio\*\* (verzija kompatibilna s korištenim VCL i FastReport komponentama)
+Kloniranje repozitorija:
 
-\- Instalirane komponente:
+```bash
+git clone https://github.com/nikolagluhak2206-cmd/GZP-planer.git
+```
 
-&#x20; - \*\*FastReport VCL\*\*
+Nakon kloniranja:
 
-&#x20; - \*\*TurboPower LockBox\*\* (uTPLb biblioteke za enkripciju/hash)
+1. Otvori `Gume Zelina Planer.cbproj` u Embarcadero C++Builderu.
+2. Provjeri jesu li instalirane potrebne komponente.
+3. Provjeri konfiguraciju konekcije prema `GZP.mdb` bazi.
+4. Buildaj projekt.
+5. Pokreni aplikaciju.
 
-&#x20; - \*\*Sisulizer runtime\*\* komponente (`siComp`, `siLngLnk`, `siLangCombo`) za višejezičnost
+## Korištenje
 
-\- \*\*Microsoft Access Database Engine\*\* (ACE/Jet OLEDB driver) za pristup `.mdb` bazi putem ADO-a
+### 1. Prijava
 
-\- Pristup internetu (za modul pretrage guma koji poziva vanjski API)
+Prilikom pokretanja aplikacije korisnik se prijavljuje svojim korisničkim imenom i lozinkom.
 
+### 2. Glavni ekran
 
+Nakon uspješne prijave prikazuje se glavni ekran s kalendarom i terminima.
 
-\## Instalacija i pokretanje
+Odabirom određenog datuma prikazuju se termini rezervirani za taj dan.
 
+### 3. Crna lista
 
+Registracija vozila može se dodati na crnu listu, zajedno s razlogom dodavanja.
 
-1\. Kloniraj repozitorij:
+Aplikacija automatski provjerava nalazi li se registracija na crnoj listi te prema tome označava termine.
 
-&#x20;  ```bash
+### 4. Hotel guma
 
-&#x20;  git clone https://github.com/nikolagluhak2206-cmd/GZP-planer.git
+Modul omogućuje unos, izmjenu, brisanje i pretragu podataka o pohranjenim gumama.
 
-&#x20;  ```
+Za zaprimljene gume moguće je generirati potvrdu putem FastReporta.
 
-2\. Otvori `Gume Zelina Planer.cbproj` u Embarcadero C++Builderu.
+### 5. Cjenik
 
-3\. Provjeri i po potrebi instaliraj nedostajuće komponente (FastReport, TurboPower LockBox, Sisulizer).
+Omogućeno je kreiranje i uređivanje stavki cjenika te generiranje ispisa.
 
-4\. Provjeri da je `GZP.mdb` u istom direktoriju kao izvršna datoteka (ili prilagodi putanju u konekcijskom stringu).
+### 6. Pretraga guma
 
-5\. Buildaj projekt (Build/Compile) i pokreni (`Run`).
+Korisnik odabire podatke o vozilu, nakon čega aplikacija dohvaća preporučene dimenzije guma putem vanjskog API-ja.
 
+### 7. Korisnici i postavke
 
+Administratori mogu upravljati korisničkim računima i korisničkim ulogama.
 
-\## Korištenje
+U postavkama je moguće mijenjati jezik i druge postavke aplikacije.
 
+## Sigurnost
 
+* Lozinke korisnika hashiraju se prije spremanja i provjere.
+* Za hashiranje se koristi TurboPower LockBox.
+* Za dodatnu sigurnost pri obradi lozinki korišteni su salt i pepper mehanizmi.
+* Podaci modula "Hotel guma" mogu se enkriptirati prije spremanja u JSON.
+* Za enkripciju se koriste TurboPower LockBox `TCodec` i `TCryptographicLibrary`.
 
-1\. \*\*Prijava\*\* — pri pokretanju aplikacije unosi se korisničko ime i lozinka.
+## Screenshots
 
-2\. \*\*Glavni ekran\*\* — nakon prijave prikazuje se kalendar; odabirom datuma učitavaju se termini za taj dan u tablici.
+### Login
 
-3\. \*\*Crna lista\*\* — desnim klikom na termin moguće je dodati registraciju vozila na crnu listu uz naveden razlog; termini povezani s vozilima na crnoj listi vizualno su istaknuti.
+![Login](screenshots/login.png)
 
-4\. \*\*Hotel guma\*\* — kroz izbornik otvara se modul za unos/pretragu pohranjenih guma (vlasnik, kontakt, dimenzija, lokacija, datum), s mogućnošću ispisa potvrde o zaprimanju.
+### Glavni ekran
 
-5\. \*\*Cjenik\*\* — kreiranje/uređivanje stavki cjenika i njegov ispis.
+![Glavni ekran](screenshots/glavna.png)
 
-6\. \*\*Pretraga guma\*\* — odabirom godine proizvodnje, marke, modela i izvedbe vozila dohvaćaju se preporučene dimenzije guma.
+### Termini
 
-7\. \*\*Korisnici i postavke\*\* — administratori mogu dodavati/uređivati korisničke račune te mijenjati postavke aplikacije (uključujući jezik sučelja).
+![Termini](screenshots/termini.png)
 
+### Hotel guma
 
+![Hotel guma](screenshots/hotel-gume.png)
 
-\## Sigurnost
+### Postavke
 
+![Postavke](screenshots/postavke.png)
 
+## Poznata ograničenja
 
-\- Lozinke korisnika se hashiraju prije spremanja/provjere (TurboPower LockBox `THash`).
+* Aplikacija je namijenjena Windows operacijskom sustavu i VCL okruženju.
+* Za kompajliranje projekta potrebne su vanjske komponente korištene tijekom razvoja.
+* Microsoft Access baza prikladna je prvenstveno za manji lokalni sustav.
+* Rad većeg broja korisnika istovremeno preko mreže zahtijevao bi dodatnu prilagodbu arhitekture.
+* Modul za pretragu guma ovisi o dostupnosti vanjskog API-ja.
+* Projekt je razvijen kao desktop aplikacija i nije predviđen za mobilne ili web platforme.
 
-\- Podaci u modulu "hotel guma" mogu se enkriptirati (`TCodec` / `TCryptographicLibrary`) prije zapisa u JSON.
+## Licenca
 
+Projekt je izrađen u edukativne svrhe.
 
+Autor: Nikola Gluhak
 
-\## Poznata ograničenja
+---
 
+### Napomena
 
-
-\- Aplikacija je vezana uz Windows/VCL okruženje i ne može se pokretati na drugim platformama bez značajnog prepravljanja.
-
-\- Baza podataka (`.mdb`) pogodna je za manji, lokalni obujam podataka; nije predviđena za rad više korisnika istovremeno preko mreže bez dodatnih prilagodbi.
-
-\- Modul pretrage guma ovisi o dostupnosti vanjskog API-ja.
-
-
-
+README dokument je generiran uz pomoć Claude-a

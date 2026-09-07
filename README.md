@@ -6,7 +6,6 @@ Desktop aplikacija (Windows, C++Builder / VCL) za upravljanje poslovanjem vulkan
 
 
 
-> Napomena: ovaj README je sastavljen na temelju pregleda strukture i izvornog koda repozitorija. Neki detalji (npr. točan izvor podataka za pretragu guma) mogu se razlikovati — po potrebi ih prilagodi.
 
 
 

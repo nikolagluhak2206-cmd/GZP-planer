@@ -15,7 +15,6 @@ Aplikacija omogućuje zakazivanje termina, evidenciju korisnika, upravljanje crn
 * [Instalacija i pokretanje](#instalacija-i-pokretanje)
 * [Korištenje](#korištenje)
 * [Sigurnost](#sigurnost)
-* [Screenshots](#screenshots)
 * [Poznata ograničenja](#poznata-ograničenja)
 * [Licenca](#licenca)
 
@@ -256,27 +255,6 @@ U postavkama je moguće mijenjati jezik i druge postavke aplikacije.
 * Podaci modula "Hotel guma" mogu se enkriptirati prije spremanja u JSON.
 * Za enkripciju se koriste TurboPower LockBox `TCodec` i `TCryptographicLibrary`.
 
-## Screenshots
-
-### Login
-
-![Login](screenshots/login.png)
-
-### Glavni ekran
-
-![Glavni ekran](screenshots/glavna.png)
-
-### Termini
-
-![Termini](screenshots/termini.png)
-
-### Hotel guma
-
-![Hotel guma](screenshots/hotel-gume.png)
-
-### Postavke
-
-![Postavke](screenshots/postavke.png)
 
 ## Poznata ograničenja
 

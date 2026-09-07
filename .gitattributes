@@ -1,0 +1,9 @@
+*.dfm linguist-language=C++
+*.cpp linguist-language=C++
+*.h linguist-language=C++
+
+*.json linguist-language=JSON
+*.xml linguist-language=XML
+
+*.mdb linguist-vendored
+*.accdb linguist-vendored
